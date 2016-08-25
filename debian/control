@@ -1,5 +1,5 @@
-Source: emb-gpio
-Section: unknown
+Source: libemb-gpio-perl
+Section: misc
 Priority: optional
 Maintainer: Joonas Kylmälä <joonas.kylmala@jns.fi>
 Standards-Version: 3.9.5

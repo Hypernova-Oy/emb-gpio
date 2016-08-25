@@ -6,7 +6,6 @@ Standards-Version: 3.9.5
 Build-Depends: debhelper (>=9),
  perl,
  libmodern-perl-perl,
- libhipi-perl
 
 Package: emb-gpio
 Architecture: all
@@ -14,7 +13,6 @@ Multi-Arch: foreign
 Depends: perl,
  libmodern-perl-perl,
  libhipi-perl
- 
 Standards-Version: 3.9.5
 Description: Easy usage of Raspberry Pi GPIOs
  This module allows easy way to do control

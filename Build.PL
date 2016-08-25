@@ -9,9 +9,13 @@ my $build = Module::Build->new
 
      build_requires => {
 	 'Modern::Perl' => '1',
+     },
+
+     requires => {
+	 'Modern::Perl' => '1',
 	 'HiPi::Device::GPIO' => '0.50',
 	 'HiPi::Constant' => '0.20',
-     },
+     }
 
     );
 

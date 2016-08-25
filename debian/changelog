@@ -1,3 +1,10 @@
+libemb-gpio-perl (0.01-2) UNRELEASED; urgency=low
+
+  * update package name.
+
+
+ -- Joonas Kylmälä <joonas.kylmala@jns.fi>  Thu, 25 Aug 2016 12:34:00 +0000
+
 emb-gpio (0.01-1) UNRELEASED; urgency=low
 
   * Initial release.

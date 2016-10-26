@@ -22,7 +22,7 @@ compile:
 
 hipiInstall:
 	#Upgrade HiPi or install it
-	hipi-upgrade || ( cd ~ && wget http://raspberry.znix.com/hipifiles/hipi-install && echo 'n' | sudo perl hipi-install )
+	hipi-upgrade || ( wget http://raspberry.znix.com/hipifiles/hipi-install && cat hipi-install-correct-answers | sudo perl hipi-install )
 
 test:
 

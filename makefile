@@ -9,6 +9,8 @@ RC      := test $$? -lt 100
 
 build: compile
 
+restart:
+
 install: build configure hipiInstall perlDeploy serviceEnable
 
 perlDeploy:

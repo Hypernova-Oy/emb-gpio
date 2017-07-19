@@ -25,6 +25,8 @@ compile:
 hipiInstall:
 	#Upgrade HiPi or install it
 	hipi-upgrade || ( wget http://raspberry.znix.com/hipifiles/hipi-install && cat hipi-install-correct-answers | sudo perl hipi-install )
+	#hipi-upgrade can malfunction and cannot pull the latest Perl modules, so manually check their existence.
+	cpanm HiPi
 
 test:
 

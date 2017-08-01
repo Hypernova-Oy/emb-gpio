@@ -21,7 +21,7 @@ our $VERSION = "0.01";
 
 use Modern::Perl;
 use HiPi::Device::GPIO;
-use HiPi::Constant qw( :raspberry );
+use HiPi qw( :rpi );
 
 sub new {
     my $class = shift;

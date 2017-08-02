@@ -3,6 +3,10 @@ confDir=etc/$(programName)
 systemdServiceDir=etc/systemd/system
 
 
+debianPackages=perl
+debianPackagedPerlModules=libmodern-perl-perl
+
+
 #Macro to check the exit code of a make expression and possibly not fail on warnings
 RC      := test $$? -lt 100 
 
@@ -11,7 +15,11 @@ build: compile
 
 restart:
 
-install: build configure hipiInstall perlDeploy serviceEnable
+install: installPackages build configure hipiInstall perlDeploy serviceEnable
+
+installPackages:
+	sudo apt install -y $(debianPackages)
+	sudo apt install -y $(debianPackagedPerlModules)
 
 perlDeploy:
 	./Build installdeps

@@ -3,7 +3,7 @@ confDir=etc/$(programName)
 systemdServiceDir=etc/systemd/system
 
 
-debianPackages=perl
+debianPackages=perl cpanminus
 debianPackagedPerlModules=libmodern-perl-perl
 
 

@@ -17,7 +17,7 @@
 
 package GPIO;
 
-our $VERSION = "0.01";
+our $VERSION = "0.03";
 
 use Modern::Perl;
 use HiPi::Device::GPIO;
@@ -40,7 +40,7 @@ sub new {
     return bless $self, $class;
 }
 
-sub deInit {
+sub DESTROY {
     my ($self) = @_;
 
     $self->{dev}->unexport_pin($self->{pin});
@@ -50,7 +50,6 @@ sub turnOff {
     my ($self) = @_;
     my $pin = $self->{pin};
     $pin->value(0);
-    deInit($self);
 }
 sub turnOn {
     my ($self) = @_;

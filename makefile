@@ -38,6 +38,7 @@ hipiInstall:
 	cpanm HiPi
 
 test:
+	prove -Ilib -I. t/*.t
 
 configure:
 

@@ -43,7 +43,9 @@ sub new {
 sub DESTROY {
     my ($self) = @_;
 
-    $self->{dev}->unexport_pin($self->{pin});
+    if ($self->{dev} && defined($self->{pin})) {
+        $self->{dev}->unexport_pin($self->{pin});
+    }
 }
 
 sub turnOff {

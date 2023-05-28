@@ -4,7 +4,7 @@ systemdServiceDir=etc/systemd/system
 
 
 debianPackages=perl cpanminus
-debianPackagedPerlModules=libmodern-perl-perl libimage-imlib2-perl
+debianPackagedPerlModules=libmodern-perl-perl libimage-imlib2-perl libnet-ssleay-perl
 
 
 #Macro to check the exit code of a make expression and possibly not fail on warnings

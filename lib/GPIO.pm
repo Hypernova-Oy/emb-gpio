@@ -20,7 +20,7 @@ package GPIO;
 our $VERSION = "0.03";
 
 use Modern::Perl;
-use HiPi::Device::GPIO;
+use HiPi::GPIO;
 use HiPi qw( :rpi );
 
 sub new {
@@ -29,8 +29,7 @@ sub new {
     my $self = {};
     $self->{pin} = shift;
 
-    my $dev = HiPi::Device::GPIO->new();
-    $dev->export_pin($self->{pin});
+    my $dev = HiPi::GPIO->new();
     my $pin = $dev->get_pin($self->{pin});
     $pin->mode(RPI_PINMODE_OUTP);
 
@@ -56,7 +55,7 @@ sub turnOff {
 sub turnOn {
     my ($self) = @_;
     my $pin = $self->{pin};
-    $pin->value(2);
+    $pin->value(1);
 }
 
 1;
